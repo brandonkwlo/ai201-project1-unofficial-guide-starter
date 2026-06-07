@@ -125,10 +125,11 @@ I'd keep it because the 512 token limit isn't a constraint for short reviews, lo
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
 
-We will begin by feeding the pipeline sources gathered from Rate My Professor, all of which are in URL form. These URLs will be fetched and converted into HTML, then cleaned and transformed into Markdown to ensure structured, noise-free text. The Markdown documents will then pass through recursive chunking, breaking them into appropriately sized segments before being embedded using `intfloat/e5-base-v2` and stored in a vector store. When a query is made, semantic retrieval will pull the most relevant chunks, which are then passed to Groq's `llama-3.3-70b` model for final answer generation.
-
 **Milestone 3 — Ingestion and chunking:**
+I will give Claude my data cleaning approach and ask it to implement data_clean.py using the Rate My Professor GraphQL API to scrape and convert professor/review data into structured .md files. I will then give Claude my chunking strategy spec and ask it to implement ingest.py and chunking.py with a chunk size of 350 and overlap of 100. I will verify the output by inspecting sample chunks to confirm sizing and that no review content is being cut mid-sentence.
 
 **Milestone 4 — Embedding and retrieval:**
+I will give Claude my embedding and storage requirements and ask it to implement the vector store logic using intfloat/e5-base-v2 and ChromaDB. I will verify by querying the vector store directly with a sample question and confirming the top retrieved chunks are semantically relevant.
 
 **Milestone 5 — Generation and interface:**
+I will give Claude my retrieval output format and ask it to implement the generation step, wiring the retrieved chunks as context into a Groq API call using llama-3.3-70b. I will verify by running end-to-end test queries and checking that the generated answers are grounded in the retrieved chunks and not hallucinated.
