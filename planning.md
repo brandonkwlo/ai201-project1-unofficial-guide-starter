@@ -11,6 +11,8 @@
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
 
+My system covers University of California Irvine (UCI) Computer Science professor reviews. It is useful because it dives deeper into the inner workings of the courses such as difficulty, workload, and the teaching style of the professor from the perspective of the student. Also, it helps the student determine whether they want to enroll in a course with said professor.
+
 ---
 
 ## Documents
@@ -18,18 +20,18 @@
 <!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
      Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 
-| # | Source | Description | URL or location |
-|---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+Sources are all from Rate My Professor where it collects student reviews based on the professor and course they were teaching.
+
+- Hadar Ziv https://www.ratemyprofessors.com/professor/421976
+- Michael Shindler https://www.ratemyprofessors.com/professor/2512998
+- Raymond Klefstad https://www.ratemyprofessors.com/professor/17490
+- Alexander Ihler https://www.ratemyprofessors.com/professor/1751393
+- Kalev Kask https://www.ratemyprofessors.com/professor/2223956
+- Vijay Vazirani https://www.ratemyprofessors.com/professor/2763913
+- Jennifer Wong-Ma https://www.ratemyprofessors.com/professor/2409085
+- Erik Sudderth https://www.ratemyprofessors.com/professor/2285930
+- Scott Jordan https://www.ratemyprofessors.com/professor/240643
+- Xiaohui Xie https://www.ratemyprofessors.com/professor/2127710
 
 ---
 
@@ -71,13 +73,13 @@
      is right or wrong. "What are good dining halls?" is too vague.
      "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
 
-| # | Question | Expected answer |
-|---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| #   | Question | Expected answer |
+| --- | -------- | --------------- |
+| 1   |          |                 |
+| 2   |          |                 |
+| 3   |          |                 |
+| 4   |          |                 |
+| 5   |          |                 |
 
 ---
 

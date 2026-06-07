@@ -1,7 +1,7 @@
 # The Unofficial Guide — Project 1
 
 > **How to use this template:**
-> Complete each section *after* you've built and tested the corresponding part of your system.
+> Complete each section _after_ you've built and tested the corresponding part of your system.
 > Do not write placeholder text — if a section isn't done yet, leave it blank and come back.
 > Every section below is required for submission. One-liners will not receive full credit.
 
@@ -14,7 +14,7 @@
      Example: "Student reviews of CS professors at [university] — useful because official
      course descriptions don't reflect teaching style, exam difficulty, or workload." -->
 
----
+My system covers University of California Irvine (UCI) Computer Science professor reviews. It is useful because it dives deeper into the inner workings of the courses such as difficulty, workload, and the teaching style of the professor from the perspective of the student. Also, it helps the student determine whether they want to enroll in a course with said professor.
 
 ## Document Sources
 
@@ -22,18 +22,18 @@
      Be specific: include URLs, subreddit names, forum thread titles, or file names.
      Aim for variety — sources that together cover different subtopics or perspectives. -->
 
-| # | Source | Type | URL or file path |
-|---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+Sources are all from Rate My Professor where it collects student reviews based on the professor and course they were teaching.
+
+- Hadar Ziv https://www.ratemyprofessors.com/professor/421976
+- Michael Shindler https://www.ratemyprofessors.com/professor/2512998
+- Raymond Klefstad https://www.ratemyprofessors.com/professor/17490
+- Alexander Ihler https://www.ratemyprofessors.com/professor/1751393
+- Kalev Kask https://www.ratemyprofessors.com/professor/2223956
+- Vijay Vazirani https://www.ratemyprofessors.com/professor/2763913
+- Jennifer Wong-Ma https://www.ratemyprofessors.com/professor/2409085
+- Erik Sudderth https://www.ratemyprofessors.com/professor/2285930
+- Scott Jordan https://www.ratemyprofessors.com/professor/240643
+- Xiaohui Xie https://www.ratemyprofessors.com/professor/2127710
 
 ---
 
@@ -91,13 +91,13 @@
      Be honest — a partially accurate or inaccurate result that you explain well is more
      valuable than a suspiciously perfect result. -->
 
-| # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
-|---|----------|-----------------|------------------------------|-------------------|-------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| #   | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
+| --- | -------- | --------------- | ---------------------------- | ----------------- | ----------------- |
+| 1   |          |                 |                              |                   |                   |
+| 2   |          |                 |                              |                   |                   |
+| 3   |          |                 |                              |                   |                   |
+| 4   |          |                 |                              |                   |                   |
+| 5   |          |                 |                              |                   |                   |
 
 **Retrieval quality:** Relevant / Partially relevant / Off-target  
 **Response accuracy:** Accurate / Partially accurate / Inaccurate
@@ -151,12 +151,12 @@
 
 **Instance 1**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- _What I gave the AI:_
+- _What it produced:_
+- _What I changed or overrode:_
 
 **Instance 2**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- _What I gave the AI:_
+- _What it produced:_
+- _What I changed or overrode:_
