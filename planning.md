@@ -43,10 +43,13 @@ Sources are all from Rate My Professor where it collects student reviews based o
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
 **Chunk size:**
+The chunk size will be set to the largest review size which is 350 characters.
 
 **Overlap:**
+To accomodate for overlap, it will be roughly 100 characters so that no context is lost.
 
 **Reasoning:**
+The reasoning behind the chunk and the overlap size is because the max review that a user can give on Rate My Professor is 350 characters and the overlap is to prevent any context from being lost when the chunks meld together.
 
 ---
 
@@ -59,10 +62,13 @@ Sources are all from Rate My Professor where it collects student reviews based o
      support, accuracy on domain-specific text, latency? -->
 
 **Embedding model:**
+I have chosen intfloat/e5-base-v2 for the embedding model. Great open-source option, short text speciality, and strong on opinion/review-style text.
 
 **Top-k:**
+The top 4 chunks will do as that is the sweet spot for RMP and a professor may have few reviews. So allowing us to get those will create a good enough signal for them.
 
 **Production tradeoff reflection:**
+I'd keep it because the 512 token limit isn't a constraint for short reviews, local inference removes latency and cost, and the accuracy tradeoff vs. larger models doesn't justify the complexity for this scope.
 
 ---
 
@@ -73,13 +79,13 @@ Sources are all from Rate My Professor where it collects student reviews based o
      is right or wrong. "What are good dining halls?" is too vague.
      "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
 
-| #   | Question | Expected answer |
-| --- | -------- | --------------- |
-| 1   |          |                 |
-| 2   |          |                 |
-| 3   |          |                 |
-| 4   |          |                 |
-| 5   |          |                 |
+| #   | Question                                        | Expected answer                                              |
+| --- | ----------------------------------------------- | ------------------------------------------------------------ |
+| 1   | Which professor is the easiest?                 | Reviews will vary depending on the student                   |
+| 2   | Which professor gives the most homework?        | Reviews will either say Raymond Klefstad or Jennifer Wong-Ma |
+| 3   | Which professor has the best teaching style?    | Reviews with say either Michael Shindler or Jennifer Wong-Ma |
+| 4   | Which professor at UCI is the most recommended? | Reviews will vary depending on the student                   |
+| 5   | Does Professor Klefstad give weekly quizzes?    | Yes for all his courses                                      |
 
 ---
 
@@ -89,9 +95,9 @@ Sources are all from Rate My Professor where it collects student reviews based o
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1. The documents will not be accurate for the user and it will depend on getting accuracy from the reviewers.
 
-2.
+2. Sparsity in reviews as some of the professors only have 3-5 reviews.
 
 ---
 
@@ -102,6 +108,8 @@ Sources are all from Rate My Professor where it collects student reviews based o
      Label each stage with the tool or library you're using.
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
+
+<img src="assets/pipeline.png" alt="alt text" width="70%">
 
 ---
 
@@ -116,6 +124,8 @@ Sources are all from Rate My Professor where it collects student reviews based o
      "I'll use AI to help me code" is not a plan.
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
+
+We will begin by feeding the pipeline sources gathered from Rate My Professor, all of which are in URL form. These URLs will be fetched and converted into HTML, then cleaned and transformed into Markdown to ensure structured, noise-free text. The Markdown documents will then pass through recursive chunking, breaking them into appropriately sized segments before being embedded using `intfloat/e5-base-v2` and stored in a vector store. When a query is made, semantic retrieval will pull the most relevant chunks, which are then passed to Groq's `llama-3.3-70b` model for final answer generation.
 
 **Milestone 3 — Ingestion and chunking:**
 
